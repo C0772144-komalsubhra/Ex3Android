@@ -32,15 +32,15 @@ public class OperationsActivity extends Activity {
         btnUppercase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String finalString = edtName.getText().toString().trim().toUpperCase();
-                if(finalString.isEmpty())
+                String string = edtName.getText().toString().trim().toUpperCase();
+                if(string.isEmpty())
                 {
                     edtName.setError("Enter Country Name");
                 }
                 else
                 {
                     Intent mIntent = new Intent();
-                    mIntent.putExtra("finalString", finalString);
+                    mIntent.putExtra("String", string);
                     setResult(RESULT_OK, mIntent);
                     finish();
                 }
@@ -49,9 +49,9 @@ public class OperationsActivity extends Activity {
         btnLowercase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String finalString = edtName.getText().toString().trim().toLowerCase();
+                String string = edtName.getText().toString().trim().toLowerCase();
                 Intent mIntent = new Intent();
-                mIntent.putExtra("finalString", "LOWERCASE: " + finalString);
+                mIntent.putExtra("finalString", "LOWERCASE: " + string);
                 setResult(RESULT_OK, mIntent);
                 finish();
             }
@@ -60,9 +60,9 @@ public class OperationsActivity extends Activity {
         btnmain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int finalString = edtName.getText().toString().length();
+                int string = edtName.getText().toString().length();
                 Intent mIntent = new Intent();
-                mIntent.putExtra("finalString", "FIRST NAME: " +  finalString);
+                mIntent.putExtra("String", "FIRST NAME: " +string);
                 setResult(RESULT_OK, mIntent);
                 finish();
             }

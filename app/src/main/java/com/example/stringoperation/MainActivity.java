@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
         {
             if(requestCode == REQUEST_FEATURE)
             {
-                String finalString = data.getStringExtra("finalString");
-                txtResult.setText(finalString);
+                String string = data.getStringExtra("String");
+                txtResult.setText(string);
             }
         }
 
